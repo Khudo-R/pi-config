@@ -1,0 +1,22 @@
+{
+  "lastChangelogVersion": "1.6.0",
+  "defaultProvider": "google",
+  "defaultModel": "gemini-3.1-pro-preview",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:@a5c-ai/babysitter-pi",
+    "npm:pi-antigravity",
+    "npm:context-mode",
+    "npm:pi-hashline-edit-pro",
+    "npm:pi-lsp-adapter",
+    "npm:pi-mem",
+    "npm:pi-token-speed",
+    "npm:pi-token-usage-statistics",
+    "git:github.com/obra/superpowers",
+    "npm:@raquezha/antigravity"
+  ],
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-token-usage-statistics\",\"scope\":\"user\"}": "0.2.0",
+    "{\"source\":\"npm:@raquezha/antigravity\",\"scope\":\"user\"}": "0.1.8"
+  }
+}

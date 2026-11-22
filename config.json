@@ -1,0 +1,69 @@
+{
+  "defaultModel": "antigravity/gemini-4-argon",
+  "fallbackChain": [
+    "antigravity/gemini-3.8-flash",
+    "antigravity/claude-sonnet-5-5"
+  ],
+  "modelSettings": {
+    "antigravity/gemini-4-argon": {
+      "thinking": "medium",
+      "fallback": {
+        "model": "antigravity/gemini-3.8-flash",
+        "onErrors": [
+          "RATE_LIMIT_EXCEEDED",
+          "QUOTA_EXCEEDED",
+          "429",
+          "RESOURCE_EXHAUSTED"
+        ],
+        "notify": true
+      }
+    },
+    "antigravity/gemini-3.8-flash": {
+      "thinking": "medium",
+      "fallback": {
+        "model": "antigravity/claude-sonnet-5-5",
+        "onErrors": [
+          "RATE_LIMIT_EXCEEDED",
+          "QUOTA_EXCEEDED",
+          "429",
+          "RESOURCE_EXHAUSTED"
+        ],
+        "notify": true
+      }
+    },
+    "antigravity/claude-sonnet-5-5": {
+      "thinking": "medium"
+    }
+  },
+  "plugins": {
+    "context-mode": {
+      "stripWarnings": true,
+      "maxOutputLines": 40,
+      "suppressStderrPatterns": [
+        "ExperimentalWarning",
+        "DeprecationWarning",
+        "node:punycode",
+        "\\[webpack\\.cache\\]",
+        "TS[0-9]+:.*warning",
+        "eslint.*warning"
+      ],
+      "suppressStdoutPatterns": [
+        "\\[vite\\]",
+        "HMR",
+        "webpack compiled",
+        "ready in \\d+ms",
+        "Fast Refresh",
+        "Compiled successfully",
+        "event - compiled",
+        "watching for file changes",
+        "GET / 200",
+        "POST / 200",
+        "favicon.ico"
+      ],
+      "onCommandError": {
+        "keepOnlyStacktrace": true,
+        "maxLines": 25
+      }
+    }
+  }
+}

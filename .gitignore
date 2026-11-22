@@ -1,0 +1,29 @@
+# Sensitive credentials & accounts
+auth.json
+antigravity-accounts.json
+*.key
+*.pem
+.env*
+
+# Chat history & telemetry
+sessions/
+token-usage-statistics/
+
+# Diagnostics, device state & caches
+antigravity-diagnostics.json
+models-store.json
+trust.json
+
+# Installed dependencies & runtime artifacts (managed automatically by Pi)
+npm/
+git/
+bin/
+install/
+lsp/
+context-mode/
+
+# OS / Editor metadata
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
